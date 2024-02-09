@@ -196,6 +196,9 @@ if(NOT MSVC)
     endif()
 endif()
 
+link_directories(${AUDIO_CODECS_REPO_PATH})
+include_directories(${AUDIO_CODECS_REPO_PATH}/libtimidity-sdl/include)
+
 set(SDLMixerX_SOURCES)
 set(SDLMixerX_LINK_LIBS)
 
@@ -346,6 +349,9 @@ if(SDL_MIXER_X_STATIC AND NOT BUILD_AS_VB6_BINDING)
         ${SDLMixerX_SOURCE_DIR}/src/codecs
         ${AUDIO_CODECS_INSTALL_DIR}/include/SDL2
         ${SDL_MIXER_INCLUDE_PATHS}
+        ${AUDIO_CODECS_INSTALL_DIR}/libtimidity-sdl/include
+        ${AUDIO_CODECS_INSTALL_DIR}/WavPack/include
+        ${AUDIO_CODECS_INSTALL_DIR}/libopusfile/include
     )
     target_include_directories(SDL2_mixer_ext_Static PUBLIC
         $<BUILD_INTERFACE:${SDLMixerX_SOURCE_DIR}/include>
@@ -396,6 +402,9 @@ if(SDL_MIXER_X_SHARED AND NOT BUILD_AS_VB6_BINDING)
         ${SDLMixerX_SOURCE_DIR}/src/codecs
         ${AUDIO_CODECS_INSTALL_DIR}/include/SDL2
         ${SDL_MIXER_INCLUDE_PATHS}
+        ${AUDIO_CODECS_INSTALL_DIR}/libtimidity-sdl/include
+        ${AUDIO_CODECS_INSTALL_DIR}/WavPack/include
+        ${AUDIO_CODECS_INSTALL_DIR}/libopusfile/include
     )
     target_include_directories(SDL2_mixer_ext PUBLIC
         $<BUILD_INTERFACE:${SDLMixerX_SOURCE_DIR}/include>

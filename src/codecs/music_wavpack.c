@@ -35,7 +35,7 @@
 #elif defined(HAVE_WAVPACK_H)
 #include <wavpack.h>
 #else
-#include <wavpack/wavpack.h>
+#include <wavpack.h>
 #endif
 #include <stdio.h>  /* SEEK_SET, ... */
 

@@ -1,7 +1,7 @@
 option(USE_GSF             "Build with libGSF" ON)
 if(USE_GSF AND MIXERX_LGPL)
     if(USE_SYSTEM_AUDIO_LIBRARIES)
-        find_package(libgsf QUIET)
+        find_package(GSF QUIET)
         message("GSF: [${GSF_FOUND}] ${GSF_INCLUDE_DIRS} ${GSF_LIBRARY}")
     endif()
 

@@ -31,7 +31,7 @@
 #ifdef OPUSFILE_HEADER
 #include OPUSFILE_HEADER
 #else
-#include <opus/opusfile.h>
+#include <opusfile.h>
 #endif
 
 typedef struct {
