@@ -292,6 +292,9 @@ int main(int argc, char *argv[])
         case MUS_WAV:
             typ = "WAV";
             break;
+        case MUS_GSF:
+            typ = "MINIGSF/GSF";
+            break;
         case MUS_MOD:
         case MUS_MODPLUG_UNUSED:
             typ = "MOD";

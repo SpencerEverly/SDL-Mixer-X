@@ -1627,6 +1627,14 @@ Mix_MusicType detect_music_type(SDL_RWops *src)
         return MUS_PXTONE;
     if (SDL_memcmp(magic, "PTCOLLAGE", 9) == 0)
         return MUS_PXTONE;
+    
+    /* GSF GBA files */
+    if (SDL_memcmp(magic, "MINIGSF", 7) == 0)
+        return MUS_GSF;
+    if (SDL_memcmp(magic, "GSF", 3) == 0)
+        return MUS_GSF;
+    if (SDL_memcmp(magic, "PSF", 3) == 0)
+        return MUS_GSF;
 
     /* Detect some module files */
     if (SDL_memcmp(magic, "Extended Module", 15) == 0)

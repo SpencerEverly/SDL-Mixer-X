@@ -347,7 +347,7 @@ static int GSF_GetNumTracks(void *music_p)
 
 Mix_MusicInterface Mix_MusicInterface_GSF =
 {
-    "GSF",
+    "MINIGSF",
     MIX_MUSIC_GSF,
     MUS_GSF,
     SDL_FALSE,

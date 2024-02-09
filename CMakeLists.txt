@@ -196,7 +196,6 @@ if(NOT MSVC)
     endif()
 endif()
 
-link_directories(${AUDIO_CODECS_REPO_PATH})
 include_directories(${AUDIO_CODECS_REPO_PATH}/libtimidity-sdl/include)
 
 set(SDLMixerX_SOURCES)
@@ -349,9 +348,6 @@ if(SDL_MIXER_X_STATIC AND NOT BUILD_AS_VB6_BINDING)
         ${SDLMixerX_SOURCE_DIR}/src/codecs
         ${AUDIO_CODECS_INSTALL_DIR}/include/SDL2
         ${SDL_MIXER_INCLUDE_PATHS}
-        ${AUDIO_CODECS_INSTALL_DIR}/libtimidity-sdl/include
-        ${AUDIO_CODECS_INSTALL_DIR}/WavPack/include
-        ${AUDIO_CODECS_INSTALL_DIR}/libopusfile/include
     )
     target_include_directories(SDL2_mixer_ext_Static PUBLIC
         $<BUILD_INTERFACE:${SDLMixerX_SOURCE_DIR}/include>
@@ -618,7 +614,7 @@ print_sumary("libEDMIDI" USE_MIDI_EDMIDI EDMIDI_FOUND EDMIDI_LIBRARIES MIXERX_ZL
 print_sumary("FluidSynth" USE_MIDI_FLUIDSYNTH FluidSynth_FOUND FluidSynth_LIBRARIES MIXERX_LGPL "LGPLv2.1")
 print_sumary("FluidLite" USE_MIDI_FLUIDLITE FluidLite_FOUND FluidLite_LIBRARIES MIXERX_LGPL "LGPLv2.1")
 print_sumary("Timidity-SDL" USE_MIDI_TIMIDITY TIMIDITYSDL_FOUND TIMIDITYSDL_LIBRARIES MIXERX_ZLIB "-")
-print_sumary("libgsf" USE_GSF GSF_FOUND GSF_LIBRARY MIXERX_ZLIB "-")
+print_sumary("libgsf" USE_GSF GSF_FOUND GSF_LIB MIXERX_ZLIB "-")
 
 printFormats()
 

@@ -293,6 +293,7 @@ typedef enum {
     MUS_NONE,
     MUS_CMD,
     MUS_WAV,
+    MUS_GSF,
     MUS_MOD,
     MUS_MID,
     MUS_OGG,
@@ -312,7 +313,7 @@ typedef enum {
     MUS_OPNMIDI,
     MUS_FLUIDLITE,
     MUS_EDMIDI,
-    MUS_NATIVEMIDI
+    MUS_NATIVEMIDI,
 } Mix_MusicType;
 
 typedef enum {

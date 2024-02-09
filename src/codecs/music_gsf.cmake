@@ -2,7 +2,7 @@ option(USE_GSF             "Build with libGSF" ON)
 if(USE_GSF AND MIXERX_LGPL)
     if(USE_SYSTEM_AUDIO_LIBRARIES)
         find_package(GSF QUIET)
-        message("GSF: [${GSF_FOUND}] ${GSF_INCLUDE_DIRS} ${GSF_LIBRARY}")
+        message("GSF: [${GSF_FOUND}] ${GSF_INCLUDE_DIRS} ${GSF_LIB}")
     endif()
 
     if(GSF_FOUND)
@@ -17,7 +17,7 @@ if(USE_GSF AND MIXERX_LGPL)
         list(APPEND SDL_MIXER_INCLUDE_PATHS ${GSF_INCLUDE_DIRS})
 
         if(NOT USE_SYSTEM_AUDIO_LIBRARIES)
-            list(APPEND SDLMixerX_LINK_LIBS ${GSF_LIBRARY})
+            list(APPEND SDLMixerX_LINK_LIBS ${GSF_LIB})
         endif()
 
         list(APPEND SDLMixerX_SOURCES
