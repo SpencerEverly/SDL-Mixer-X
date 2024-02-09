@@ -200,7 +200,7 @@ set(SDLMixerX_SOURCES)
 set(SDLMixerX_LINK_LIBS)
 
 include(music_wav)
-
+include(music_gsf)
 include(music_ogg_vorbis)
 include(music_opus)
 include(music_flac)
@@ -251,7 +251,6 @@ else()
 endif()
 
 include(music_ogg)
-include(music_gsf)
 
 include(libSDL2)
 
@@ -610,6 +609,7 @@ print_sumary("libEDMIDI" USE_MIDI_EDMIDI EDMIDI_FOUND EDMIDI_LIBRARIES MIXERX_ZL
 print_sumary("FluidSynth" USE_MIDI_FLUIDSYNTH FluidSynth_FOUND FluidSynth_LIBRARIES MIXERX_LGPL "LGPLv2.1")
 print_sumary("FluidLite" USE_MIDI_FLUIDLITE FluidLite_FOUND FluidLite_LIBRARIES MIXERX_LGPL "LGPLv2.1")
 print_sumary("Timidity-SDL" USE_MIDI_TIMIDITY TIMIDITYSDL_FOUND TIMIDITYSDL_LIBRARIES MIXERX_ZLIB "-")
+print_sumary("libgsf" USE_GSF GSF_FOUND GSF_LIBRARY MIXERX_ZLIB "-")
 
 printFormats()
 
