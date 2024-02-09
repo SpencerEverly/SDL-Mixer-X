@@ -638,6 +638,9 @@ static Mix_MusicInterface *s_music_interfaces[] =
 #ifdef MUSIC_GME
     &Mix_MusicInterface_GME,
 #endif
+#ifdef MUSIC_GSF
+    &Mix_MusicInterface_GSF,
+#endif
     NULL
 };
 

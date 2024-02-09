@@ -251,6 +251,7 @@ else()
 endif()
 
 include(music_ogg)
+include(music_gsf)
 
 include(libSDL2)
 
