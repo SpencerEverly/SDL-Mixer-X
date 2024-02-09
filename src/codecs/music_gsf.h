@@ -25,4 +25,4 @@
 
 extern Mix_MusicInterface Mix_MusicInterface_GSF;
 
-#endif
+/* vi: set ts=4 sw=4 expandtab: */

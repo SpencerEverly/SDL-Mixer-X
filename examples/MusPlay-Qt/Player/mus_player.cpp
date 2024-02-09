@@ -189,7 +189,7 @@ namespace PGE_MusicPlayer
                     type == MUS_NONE ? "No Music" :
                     type == MUS_CMD ? "CMD" :
                     type == MUS_WAV ? "PCM Wave" :
-                    type == MUS_GSF ? "MINIGSF/GSF" :
+                    type == MUS_GSF ? "GSF" :
                     type == MUS_MOD ? "Tracker" :
                     type == MUS_MID ? "MIDI" :
                     type == MUS_OGG ? "OGG" :

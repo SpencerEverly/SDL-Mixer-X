@@ -26,6 +26,7 @@
 #include "mixer.h"
 #include "music.h"
 
+#include "music_gsf.h"
 #include "music_cmd.h"
 #include "music_wav.h"
 #include "music_modplug.h"
@@ -614,6 +615,9 @@ static Mix_MusicInterface *s_music_interfaces[] =
 #ifdef MUSIC_MOD_XMP
     &Mix_MusicInterface_XMP,
 #endif
+#ifdef MUSIC_GSF
+    &Mix_MusicInterface_GSF,
+#endif
 #ifdef MUSIC_MOD_MODPLUG
     &Mix_MusicInterface_MODPLUG,
 #endif
@@ -637,9 +641,6 @@ static Mix_MusicInterface *s_music_interfaces[] =
 #endif
 #ifdef MUSIC_GME
     &Mix_MusicInterface_GME,
-#endif
-#ifdef MUSIC_GSF
-    &Mix_MusicInterface_GSF,
 #endif
     NULL
 };

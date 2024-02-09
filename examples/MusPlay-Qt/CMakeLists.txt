@@ -2,7 +2,7 @@ cmake_minimum_required (VERSION 2.8.12)
 project(SDLMixerMusPlayer)
 
 include(GNUInstallDirs)
-include(NoPie)
+#include(NoPie)
 
 # Version
 include(version.cmake)
@@ -92,7 +92,7 @@ list(APPEND SDLMixer_MusPlay_SRC
 add_executable(sdlmixer_musplay
     ${SDLMixer_MusPlay_SRC}
 )
-pge_set_nopie(sdlmixer_musplay)
+#pge_set_nopie(sdlmixer_musplay)
 
 set(PGE_MUSPLAY_LINK_LIBS)
 list(APPEND PGE_MUSPLAY_LINK_LIBS

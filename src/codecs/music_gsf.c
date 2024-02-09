@@ -23,8 +23,8 @@
 
 #include "SDL_loadso.h"
 
-#include "music_gsf.h"
 #include "utils.h"
+#include "music_gsf.h"
 
 #include <gsf.h>
 
@@ -131,12 +131,12 @@ static int initialize(GSF_Music *music)
     meta_tags_set(&music->tags, MIX_META_ARTIST, mus_info->artist);
     meta_tags_set(&music->tags, MIX_META_ALBUM, mus_info->game);
     meta_tags_set(&music->tags, MIX_META_COPYRIGHT, mus_info->copyright);
-    gme.gsf_free_tags(mus_info);
+    gsf.gsf_free_tags(mus_info);
 
     return 0;
 }
 
-static GSF_Music *GSF_CreateFromRW(SDL_RWops *src, const char *args)
+static GSF_Music* GSF_CreateFromRW(SDL_RWops *src, const char *args)
 {
     void *mem = 0;
     size_t size;
@@ -144,7 +144,7 @@ static GSF_Music *GSF_CreateFromRW(SDL_RWops *src, const char *args)
     GsfError *err;
 
     if (src == NULL) {
-        Mix_SetError("GME: Empty source given");
+        Mix_SetError("GSF: Empty source given");
         return NULL;
     }
 
@@ -347,7 +347,7 @@ static int GSF_GetNumTracks(void *music_p)
 
 Mix_MusicInterface Mix_MusicInterface_GSF =
 {
-    "MINIGSF",
+    "GSF",
     MIX_MUSIC_GSF,
     MUS_GSF,
     SDL_FALSE,
@@ -390,5 +390,5 @@ Mix_MusicInterface Mix_MusicInterface_GSF =
     GSF_Unload
 };
 
-#endif /* MUSIC_GME */
+#endif /* MUSIC_GSF */
 
